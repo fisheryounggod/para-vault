@@ -1,0 +1,41 @@
+<footer class="site-footer h-card" style="background: linear-gradient(135deg, #1e293b, #334155); color: white; padding: 2rem; margin-top: 3rem;">
+  <div class="stats-container" style="margin: 0; gap: 2rem;">
+    <div class="stat-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
+      <div class="stat-label">页面访问</div>
+      <div class="stat-value" id="pageViews">0</div>
+    </div>
+    <div class="stat-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
+      <div class="stat-label">总访问量</div>
+      <div class="stat-value" id="totalViews">0</div>
+    </div>
+    <div class="stat-card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
+      <div class="stat-label">笔记数量</div>
+      <div class="stat-value">4+</div>
+    </div>
+  </div>
+  
+  <div style="text-align: center; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+    <p style="margin: 0.5rem 0;">
+      🤖 使用 <a href="https://obsidian.md" style="color: #60a5fa;">Obsidian</a> 管理知识，
+      通过 <a href="https://pages.github.com" style="color: #60a5fa;">GitHub Pages</a> 发布
+    </p>
+    <p style="margin: 0.5rem 0; font-size: 0.875rem; opacity: 0.8;">
+      © 2026 xiongfeel · 基于 <a href="https://github.com/fisheryounggod/para-vault" style="color: #60a5fa;">PARA方法</a>
+    </p>
+  </div>
+  
+  <script>
+    // 简单的访问统计模拟
+    const views = localStorage.getItem('pageViews') || '0';
+    const totalViews = localStorage.getItem('totalViews') || '0';
+    
+    const newViews = parseInt(views) + 1;
+    const newTotal = parseInt(totalViews) + 1;
+    
+    localStorage.setItem('pageViews', newViews.toString());
+    localStorage.setItem('totalViews', newTotal.toString());
+    
+    document.getElementById('pageViews').textContent = newViews;
+    document.getElementById('totalViews').textContent = newTotal;
+  </script>
+</footer>

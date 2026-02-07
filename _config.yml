@@ -1,6 +1,59 @@
 # GitHub Pages配置
-theme: jekyll-theme-minimal
+theme: minima
 title: PARA Vault
-description: Obsidian PARA知识管理系统
+description: Obsidian PARA知识管理系统 - Projects, Areas, Resources, Archives
+author: xiongfeel
+
+# 插件配置
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Markdown配置
 markdown: kramdown
 highlighter: rouge
+
+# Kramdown配置
+kramdown:
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+
+# 网站配置
+url: https://fisheryounggod.github.io/para-vault
+baseurl: 
+lang: zh_CN
+
+# 导航菜单
+header_pages:
+  - index.md
+  - 00-Projects.md
+  - 01-Areas.md
+  - 02-Resources.md
+  - 03-Archives.md
+
+# 社交链接
+github_username: fisheryounggod
+
+# Google Analytics (可选)
+# google_analytics: UA-XXXXXXXXX-X
+
+# 样式配置
+minima:
+  date_format: %Y-%m-%d
+  
+# 排除文件
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
