@@ -1,0 +1,6 @@
+# GitHub Pages配置
+theme: jekyll-theme-minimal
+title: PARA Vault
+description: Obsidian PARA知识管理系统
+markdown: kramdown
+highlighter: rouge
